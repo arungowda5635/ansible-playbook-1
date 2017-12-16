@@ -1,0 +1,20 @@
+---
+
+- name: apply this to common config (all nodes)
+  hosts: all
+  remote_user: root
+  roles:
+    - common
+
+- name: for the webserver tier
+  hosts: webservers
+  remote_user: root
+  roles:
+    - web
+
+- name: MySQL Layers Definition
+  hosts: dbservers
+  remote_user: root
+  roles:
+    - db
+

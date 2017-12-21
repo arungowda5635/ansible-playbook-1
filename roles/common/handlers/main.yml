@@ -1,8 +1,0 @@
---
-
-- name: restart ntp
-  service: name=ntpd state=restarted
-
-- name: restart ipables 
-  service: name=iptables state=restarted
-  
